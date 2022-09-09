@@ -12,7 +12,18 @@ function startgame() {
 }
 
 function displayquection() {
-
+    let questions = [
+        {
+            question: "What is the capital of United Kingdom?",
+            choices: ["Manchester", "Birmington", "London", "Birmingham"],
+            answer: 2
+        },
+        {
+            question: "What is the capital of United States?",
+            choices: ["Califfornia", "New York", "Miami", "Florida"],
+            answer: 1
+        }
+    ];
 }
 
 function checkanswer() {
