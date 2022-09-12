@@ -22,7 +22,28 @@ function displayquection() {
             question: "What is the capital of United States?",
             choices: ["Califfornia", "New York", "Miami", "Florida"],
             answer: 1
+        },
+        {
+            question: "How many Spice Girls was in the group?",
+            choices: ["2", "8", "5", "7"],
+            answer: 3
+        },
+        {
+            question: "Who sang living on a prere?",
+            choices: ["Westlife", "BoyGeorge", "Bonjoby", "TheBeatels"],
+            answer: 3
+        },
+        {
+            question: "What colour is grass?",
+            choices: ["Blue", "Green", "Black", "Red"],
+            answer: 2
+        },
+        {
+            question: "What do monkyes sleep on?"
+            choices: ["Floor", "Tree", "Bed", "Bathtub"],
+            answer: 3
         }
+
     ];
 }
 
