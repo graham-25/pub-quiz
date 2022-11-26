@@ -3,7 +3,7 @@
     font-family: 'Times New Roman';
 }
 
-:root{
+:root {
     --hue-neutral: 200;
     --hue-wrong: 0;
     --hue-correct: 145;
@@ -71,7 +71,7 @@ body.wrong {
 .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .controls {
