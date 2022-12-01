@@ -1,7 +1,7 @@
 const startButton = document.getElementById('start-btn')
 const questionBoxElement = document.getElementById('questionBox')
 
-const questionElement = document.getElementById('question')
+const questionElement = document.getElementById('questionDisplay')
 
 let shuffledQuestions, currentQuestionIndex
 
