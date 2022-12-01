@@ -1,7 +1,8 @@
 const startButton = document.getElementById('start-btn')
 const questionBoxElement = document.getElementById('questionBox')
 
-const questionElement = document.getElementById('questions')
+const questionElement = document.getElementById('question')
+
 let shuffledQuestions, currentQuestionIndex
 
 
@@ -20,8 +21,8 @@ function displayNextQuection() {
    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showQuestion(questions) {
-    questionElement.innerText = questions.question       //pulling question from array
+function showQuestion(question) {
+    questionElement.innerText = question.question       //pulling question from array
 }
 
 function checkanswer() {
