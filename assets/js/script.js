@@ -2,6 +2,7 @@ const startButton = document.getElementById('start-btn')
 const questionBoxElement = document.getElementById('questionBox')
 
 const questionElement = document.getElementById('questionDisplay')
+const answerButtonElement = document.getElementById('answer-btn')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -23,6 +24,16 @@ function displayNextQuection() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question       //pulling question from array
+    question.answer.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', this.selectAnswer)
+        answerButtonElement.appendChild(button)
+    })
 }
 
 function checkanswer() {
@@ -53,25 +64,47 @@ const questions = [
             {text: "Florida", correct: false}
         ]
     },
+
     {
         question: "How many Spice Girls was in the group?",
-        choices: ["2", "8", "5", "7"],
-        answer: 3
+        answer: [
+            {text: "2", correct: false},
+            {Text: "4", correct: false},
+            {text: "5", correct: true},
+            {text: "7", correct: false}
+        ]
+        
     },
+
     {
         question: "Who sang living on a prere?",
-        choices: ["Westlife", "BoyGeorge", "Bonjoby", "TheBeatels"],
-        answer: 3
+        answer: [
+            {text: "Westlife", correct: false},
+            {text: "BoyGeorge", correct: false}, 
+            {text: "Bonjoby", correct: true}, 
+            {text: "TheBeatels", correct: false}
+        ]
+         
     },
+
     {
         question: "What colour is grass?",
-        choices: ["Blue", "Green", "Black", "Red"],
-        answer: 2
+        answer: [
+            {text: "Blue", correct: false}, 
+            {text: "Green", correct: true}, 
+            {text: "Black", correct: false}, 
+            {text: "Red", correct: false}
+        ]
     },
+
     {
-        question: "What do monkyes sleep on?",
-        choices: ["Floor", "Tree", "Bed", "Bathtub"],
-        answer: 3
-    },
+        question: "What do monkyes (People) sleep on?",
+        answer: [
+            {text: "Floor", correct: false}, 
+            {text: "Tree", correct: false}, 
+            {text: "Bed", correct: true}, 
+            {text: "Bathtub", correct: false}
+        ]
+    }
 
 ]
